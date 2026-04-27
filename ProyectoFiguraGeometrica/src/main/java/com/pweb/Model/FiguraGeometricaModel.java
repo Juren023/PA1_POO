@@ -48,7 +48,7 @@ public class FiguraGeometricaModel {
                 perimetro = 2 * (base + altura);
                 break;
             case "triangulo":
-                // ejemplo: triángulo equilátero
+                // triángulo equilátero
                 perimetro = 3 * base;
                 break;
             case "trapecio":
