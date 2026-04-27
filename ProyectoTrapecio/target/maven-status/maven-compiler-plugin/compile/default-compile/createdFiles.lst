@@ -1,0 +1,4 @@
+com\pweb\Model\TrapecioModel.class
+com\pweb\Controller\TrapecioController.class
+com\pweb\proyectotrapecio\resources\JakartaEE11Resource.class
+com\pweb\proyectotrapecio\JakartaRestConfiguration.class
