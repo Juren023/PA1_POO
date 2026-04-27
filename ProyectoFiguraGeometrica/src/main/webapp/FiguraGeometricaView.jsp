@@ -8,7 +8,7 @@
     </head>
     <body>
 
-        <form action="FigurasController" method="post">
+        <form action="FiguraGeometricaController" method="post">
             <label>Figura:</label>
             <select name="figura">
                 <option value="cuadrado">Cuadrado</option>
@@ -18,12 +18,10 @@
                 <option value="paralelogramo">Paralelogramo</option>
             </select><br>
 
-            <label>Dato 1:</label>
-            <input type="text" name="dato1"><br>
-            <label>Dato 2:</label>
-            <input type="text" name="dato2"><br>
-            <label>Dato 3:</label>
-            <input type="text" name="dato3"><br>
+            <label>Base :</label>
+            <input type="text" name="base"><br>
+            <label>Altura :</label>
+            <input type="text" name="altura"><br>
 
             <button type="submit">Calcular</button>
         </form>

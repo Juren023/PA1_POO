@@ -15,7 +15,7 @@
         <h2>Datos del Trapecio</h2>
         
         <form action="TrapecioController" method="post">
-            <label>Área del Trapecio (H) :</label> <br>
+            <label>Área del Trapecio (cm2) :</label> <br>
             <input type="text" name="area"><br>
 
             <label>Base menor del Trapecio(AB) :</label> <br>
@@ -24,8 +24,8 @@
             <label>Base mayor del Trapecio (DC):</label> <br>
             <input type="text" name="baseMayor"><br>
 
-            <label>Base (DM) :</label> <br>
-            <input type="text" name="ladoDM"><br><br>
+            <label>Base del triangulo (DM) :</label> <br>
+            <input type="text" name="baseDM"><br><br>
 
             <button type="submit">Calcular</button>
         </form>
