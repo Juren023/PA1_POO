@@ -9,7 +9,7 @@
     
     <body>
         
-        <h1>Ejercio 1</h1>
+        <h1>Trapecio</h1>
         
         <img src="Img/Imagen1.png" alt=""/>
         <h2>Datos del Trapecio</h2>

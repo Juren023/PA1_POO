@@ -4,11 +4,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Números Romanos</title>
     </head>
     <body>
 
-        <h1>Proyecto: Números Romanos</h1>
+        <h1>Números Romanos</h1>
 
         <h2>De número natural a romano</h2>
         <form action="RomanosController" method="post">
