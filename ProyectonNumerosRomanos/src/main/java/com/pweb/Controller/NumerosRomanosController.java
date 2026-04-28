@@ -1,6 +1,6 @@
-
 package com.pweb.Controller;
 
+import com.pweb.Model.NumerosRomanosModel;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -8,7 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet(name = "NumerosRomanosController", urlPatterns = {"/NumerosRomanosController"})
 public class NumerosRomanosController extends HttpServlet {
@@ -39,20 +39,28 @@ public class NumerosRomanosController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        // processRequest(request, response);
-        
-        //1. Recibir los parametros de la web
-            
-        //2. Enviar los parametros al model 
-        
-        //3. Crear una variable de session para alamacenar respuesta 
-        
-        //4. Agregar a la variable de session la respuesta enviada del model
-        
-        //5. Envio de los resultados a la web
-    }
 
+        // processRequest(request, response);
+        //1. Recibir los parametros de la web
+        String numero = request.getParameter("numero");
+        String romano = request.getParameter("romano");
+
+        //2. Enviar los parametros al model 
+        NumerosRomanosModel objConversion = new NumerosRomanosModel(
+                (numero == null || numero.isEmpty()) ? 0 : Integer.parseInt(numero),
+                romano
+        );
+
+        //3. Crear una variable de session para alamacenar respuesta 
+        HttpSession sConvercion = request.getSession();
+
+        //4. Agregar a la variable de session la respuesta enviada del model
+        sConvercion.setAttribute("resultadoEntero", objConversion.convertirADecimal());
+        sConvercion.setAttribute("resultadoRomano", objConversion.convertirANumerosRomanos());
+
+        //5. Envio de los resultados a la web
+        response.sendRedirect("NumerosRomanosView.jsp");
+    }
 
     @Override
     public String getServletInfo() {
